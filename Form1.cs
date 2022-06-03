@@ -22,7 +22,6 @@ namespace BD_Proyecto
 
         public void Buscar()
         {
-           // String sql = "SELECT * FROM datosestudiantes NUM CONTROL" + txtBoxnoControl.Text;
             String sql = " select* from datosestudiantes where `NUM CONTROL` =" + txtBoxnoControl.Text;
             DataRow fila = nuevaConexion.getRow(sql);
 

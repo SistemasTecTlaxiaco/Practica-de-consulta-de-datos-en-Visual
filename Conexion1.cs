@@ -16,17 +16,12 @@ namespace BD_Proyecto
         string usuario = "root";
         string contraseña = "''";
         string database = "baseestudiantes";
-        /*
-        string host = "127.0.0.1";
-        string usuario = "root";
-        string contraseña = "''";
-        string database = "baseestudiantes";
-        */
 
         public Conexion1()
         {
             this.Connect();
         }
+
         public void Connect()
         {
             if (nuevaConexion.State == ConnectionState.Closed)
@@ -36,11 +31,13 @@ namespace BD_Proyecto
 
             }
         }
+        
         public int Query(string sql)
         {
             MySqlCommand cmd = new MySqlCommand(sql, nuevaConexion);
             return cmd.ExecuteNonQuery();
         }
+
         public DataTable getData(string sql)
         {
             this.Connect();
@@ -51,7 +48,6 @@ namespace BD_Proyecto
         }
 
         public DataRow getRow(string sql)
-
         {
             DataRow row = null;
             if (this.getData(sql).Rows.Count == 0)

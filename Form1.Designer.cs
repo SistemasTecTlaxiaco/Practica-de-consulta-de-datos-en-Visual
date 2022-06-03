@@ -181,7 +181,7 @@ namespace BD_Proyecto
             this.Controls.Add(this.nombre);
             this.Controls.Add(this.noControl);
             this.Name = "Form1";
-            this.Text = "estudiante";
+            this.Text = "BD_estudiante ";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
